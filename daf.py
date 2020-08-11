@@ -1,3 +1,21 @@
-lists = [1,1,1,2,2,3,4,"abc"]
-cnt = lists.count(1)   # 정수 1이 몇개인지 찾는다. ->> count("찾을 요소")     
-print("%s은, %d개 있습니다." %(1, cnt))
+from sys import stdin
+
+N = int(input())
+arr_n = list(map(int,stdin.readline().split()))
+M = int(input())
+arr_m = list(map(int,stdin.readline().split()))
+
+dic = dict()
+
+for i in arr_n:
+    try :
+        dic[i] += 1
+    except:
+        dic[i] = 1
+
+for i in arr_m:
+    try:
+        print(dic[i] , end = " ")
+    except:
+        print(0, end=" ")
+    
