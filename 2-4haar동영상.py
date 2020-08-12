@@ -5,7 +5,7 @@ import numpy as np
 
 face_cascade_name = 'web\Lib\site-packages\cv2\data\haarcascade_frontalface_alt.xml'
 eyes_cascade_name = 'web\Lib\site-packages\cv2\data\haarcascade_eye_tree_eyeglasses.xml'
-file_name = 'Opencv_practice/video/son_01.mp4'
+file_name = 'Opencv_practice/video/obama_01.mp4'
 
 def detectAndDisplay(frame):
     frame_gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
@@ -13,6 +13,7 @@ def detectAndDisplay(frame):
     ## Detect Face
     faces = face_cascade.detectMultiScale(frame_gray)
     for (x, y, w, h) in faces:
+        center = (x + w//2, y + h//2)
         frame = cv.rectangle(frame, (x,y) , (x+w, y+h), (0,255,0),4)
         faceROI= frame_gray[y:y+h, x:x+w]
         #---in each face, detect eyes
