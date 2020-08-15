@@ -33,7 +33,7 @@ def selectFile():
 def detectAndDisplay(frame, w, h):
     # pass the blob through the model and obtain the detections 
     model = cv2.dnn.readNetFromCaffe(prototxt_name, model_name)
-
+D
     # Resizing to a fixed 300x300 pixels and then normalizing it
     blob = cv2.dnn.blobFromImage(cv2.resize(frame, (300, 300)), 1.0,
             (300, 300), (104.0, 177.0, 123.0))
