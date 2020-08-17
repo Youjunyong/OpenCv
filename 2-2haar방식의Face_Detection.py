@@ -1,6 +1,5 @@
 import cv2 as cv
 import numpy as np
-
 def detectAndDisplay(frame):
     frame_gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     #그림을 grayscale로 바꾸어 정확도를 높여줘야한다. 

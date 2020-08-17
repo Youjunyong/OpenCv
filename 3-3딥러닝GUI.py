@@ -14,8 +14,6 @@ title_name = "DNN deep learning obkect detection"
 min_confidence = 0.3
 frame_width = 300
 frame_height = 300
-
-
 def selectFile():
     file_name =  filedialog.askopenfilename(initialdir = "./",title = "Select file",filetypes = (("jpeg files","*.jpg"),("all files","*.*")))
 
